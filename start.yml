@@ -11,3 +11,9 @@
   tasks:
     - name: First Test Output
       debug: msg="Start Playbook Running"
+
+    - name: Try writing a file to see if this is actually running
+      file:
+        path: /opt/cochran
+        state: directory
+        mode: '0755'
