@@ -1,0 +1,13 @@
+
+- name: Start Playbook
+  hosts: localhost
+  become: true
+
+  pre_tasks:
+    - name: Gather EC2 metadata
+      ec2_metadata_facts:
+
+
+  tasks:
+    - name: First Test Output
+      debug: msg="Start Playbook Running"
